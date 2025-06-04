@@ -1,0 +1,53 @@
+---
+sidebar_position: 2
+title: Components Demo
+description: Testing Festivawl custom components
+---
+
+import FeatureCard from '@site/src/components/FeatureCard';
+
+# Festivawl Components Demo
+
+This page demonstrates the custom components available for Festivawl documentation.
+
+## FeatureCard Component
+
+The FeatureCard component is perfect for showcasing features in a visually appealing way:
+
+<div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '2rem'}}>
+  <FeatureCard 
+    title="🎪 Festival Management"
+    description="Create and manage your festivals with ease. Set up stages, schedules, and everything your attendees need."
+    icon="🎪"
+    link="/docs/intro"
+  />
+  
+  <FeatureCard 
+    title="🎵 Lineup Builder"
+    description="Build amazing lineups with our intuitive artist management system. Schedule conflicts? We've got you covered."
+    icon="🎵"
+    link="/docs/intro"
+  />
+  
+  <FeatureCard 
+    title="📊 Analytics"
+    description="Understand your audience with detailed analytics and insights to make your festival even better."
+    icon="📊"
+    link="/docs/intro"
+  />
+</div>
+
+## Usage
+
+```tsx
+import FeatureCard from '@site/src/components/FeatureCard';
+
+<FeatureCard 
+  title="Your Feature Title"
+  description="A compelling description of your feature"
+  icon="🎯"
+  link="/path/to/docs"
+/>
+```
+
+Pretty cool, right? The grape theme automatically applies! 🍇 
