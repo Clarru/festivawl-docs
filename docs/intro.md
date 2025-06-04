@@ -28,9 +28,9 @@ Festivawl is a comprehensive festival platform that serves both **festival organ
 
 Choose your path:
 
-- **[Organizer Guide](./category/organizer-guide)** - Set up your first festival
-- **[API Reference](./category/api-docs)** - Technical integration
-- **[User Guide](./category/user-guide)** - For festival attendees
+- **[Tutorial Basics](./category/tutorial---basics)** - Learn the fundamentals
+- **[Components Demo](./components-demo)** - See our custom components
+- **[Mermaid Diagrams](./mermaid-demo)** - Visual documentation examples
 
 ## Quick Links
 
