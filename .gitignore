@@ -21,7 +21,9 @@ yarn-error.log*
 festivawl-docs-build.zip
 
 # Internal Documentation (keep private)
-IMPLEMENTATION_PLAN.md
+IMPLEMENTATION_STATUS.md
+Docs_planner.md
 PRD_Festivawl_Docusaurus.md
+PRD_festivawl.md
 .cursorrules
 .windsurfrules

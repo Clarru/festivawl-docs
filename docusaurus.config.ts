@@ -71,20 +71,7 @@ const config: Config = {
           editUrl:
             'https://github.com/Clarru/festivawl-docs/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Clarru/festivawl-docs/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Disable blog functionality
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -111,12 +98,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/Clarru/festivawl-docs',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // Removed blog link since we disabled blog functionality
       ],
     },
     footer: {

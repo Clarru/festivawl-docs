@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Quick Setup',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Get your festival live in under an hour. No technical knowledge needed.
+        Most festivals are ready to publish within 45-60 minutes.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Focus on Your Festival',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Festivawl handles the technical stuff so you can focus on what matters - 
+        creating an amazing festival experience for your attendees.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Complete Management',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        From lineup management to real-time notifications, everything you need
+        to run a successful festival is at your fingertips.
       </>
     ),
   },

@@ -1,44 +1,49 @@
 ---
-sidebar_position: 1
+slug: /
 ---
 
-# Welcome to Festivawl Documentation
+# Festivawl Admin Documentation
 
-Welcome to the **Festivawl platform documentation**! 🎪
+Welcome to the complete guide for festival organizers using Festivawl. Get your festival live in under an hour and manage it like a pro.
 
-## What is Festivawl?
+## Quick Start
 
-Festivawl is a comprehensive festival platform that serves both **festival organizers** and **festival-goers**:
+New to Festivawl? Start here:
 
-### For Festival Organizers 🎵
-- Create and manage festival events
-- Build custom schedules and lineups
-- Send notifications to attendees
-- Manage vendors and logistics
-- Real-time analytics and insights
+### [🚀 Getting Started](./getting-started)
+Your complete setup guide - from account creation to going live. Most festivals are ready to publish within 45-60 minutes.
 
-### For Festival-Goers 🎉
-- Discover festivals near you
-- Build personalized schedules
-- Get real-time notifications
-- Connect with friends
-- Navigate festival grounds
-
-## Getting Started
-
-Choose your path:
-
-- **[Tutorial Basics](./category/tutorial---basics)** - Learn the fundamentals
-- **[Components Demo](./components-demo)** - See our custom components
-- **[Mermaid Diagrams](./mermaid-demo)** - Visual documentation examples
-
-## Quick Links
-
-- 📱 **Mobile App**: Available on iOS and Android
-- 🌐 **Web Platform**: Access from any browser
-- 💬 **Support**: Contact our team for help
-- 🔧 **API**: Integrate with your existing systems
+**What you'll learn**:
+- Choosing the right plan for your festival
+- Complete festival launch checklist  
+- Step-by-step first hour setup
+- Common mistakes to avoid
 
 ---
 
-*Last updated: December 2024 - This documentation is automatically deployed! 🚀*
+## Daily Operations
+
+Festival is live? Keep it running smoothly:
+
+### [📊 Daily Festival Management](./festival-management)
+Everything you need for day-to-day operations and keeping your audience engaged.
+
+**What you'll learn**:
+- Lineup and schedule management
+- Notification strategy and timing
+- Team management and permissions
+- Content updates and emergency procedures
+
+---
+
+## Support & Contact
+
+- **Epic Tier**: Call CEO directly for immediate help
+- **All plans**: Email support@festivawl.com  
+- **Response time**: Within 24 hours
+
+---
+
+:::tip Ready to get started?
+Jump straight to [Getting Started](./getting-started) and have your festival live within the hour! 🎉
+::: 
