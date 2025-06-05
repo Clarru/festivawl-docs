@@ -100,7 +100,6 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/festivawl-social-card.jpg',
     navbar: {
-      title: 'Festivawl Docs',
       logo: {
         alt: 'Festivawl Logo',
         src: 'img/festivawl-logo.svg',
@@ -122,7 +121,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Festivawl. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Festivawl.com`,
     },
     prism: {
       theme: prismThemes.github,
@@ -138,7 +137,7 @@ const config: Config = {
       appId: process.env.ALGOLIA_APP_ID || 'YOUR_APP_ID',
       apiKey: process.env.ALGOLIA_API_KEY || 'YOUR_SEARCH_API_KEY',
       indexName: process.env.ALGOLIA_INDEX_NAME || 'festivawl_docs',
-      contextualSearch: false,
+      contextualSearch: true,
       searchPagePath: 'search',
     },
   } satisfies Preset.ThemeConfig,
