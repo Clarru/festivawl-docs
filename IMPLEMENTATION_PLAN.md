@@ -171,12 +171,149 @@ This implementation plan focuses on **building and configuring the Docusaurus in
 ### 5.3 GitHub Actions CI/CD
 
 **Automated Deployment:**
-- [ ] Create `.github/workflows/` directory
-- [ ] Write deployment YAML configuration
-- [ ] Set up GitHub repository (https://github.com/Clarru/festivawl-docs)
-- [ ] Configure GitHub secrets for deployment
-- [ ] Test automated deployment workflow
-- [ ] Document deployment process
+- [✅] Create `.github/workflows/` directory
+- [✅] Write deployment YAML configuration
+- [✅] Set up GitHub repository (https://github.com/Clarru/festivawl-docs)
+- [✅] Configure GitHub Pages source to "GitHub Actions"
+- [✅] Test automated deployment workflow
+- [✅] Document deployment process
+
+**GitHub Actions Workflow Configuration (`/.github/workflows/deploy.yml`):**
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Docusaurus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build website
+        run: pnpm build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+---
+
+## 🔄 **DEPLOYMENT PROCESS** - For Future Updates
+
+**Every time you make changes to your Docusaurus site, follow this process:**
+
+### Prerequisites Setup (One-time only):
+1. **GitHub Pages Configuration:**
+   - Go to repo **Settings** → **Pages**
+   - Set **Source** to "GitHub Actions" (NOT "Deploy from a branch")
+   - Add custom domain: `docs.festivawl.com`
+
+2. **DNS Configuration:**
+   - Add CNAME record: `docs` → `clarru.github.io`
+   - Ensure no conflicting A records for the same subdomain
+
+### Standard Deployment Commands (Our Stack):
+
+**For any content/code changes:**
+```bash
+# Navigate to project directory
+cd /path/to/festivawl-docs
+
+# Test locally first (optional but recommended)
+pnpm start
+# Verify changes look good, then Ctrl+C to stop
+
+# Build and test production version (optional)
+pnpm build
+pnpm serve
+# Verify production build works, then Ctrl+C to stop
+
+# Deploy to live site
+git add .
+git commit -m "Your descriptive commit message"
+git push origin main
+```
+
+**The GitHub Actions workflow will automatically:**
+1. ✅ Detect push to `main` branch
+2. ✅ Install dependencies with `pnpm install --no-frozen-lockfile`
+3. ✅ Build site with `pnpm build`
+4. ✅ Deploy built files to GitHub Pages
+5. ✅ Make changes live at `docs.festivawl.com`
+
+**⏱ Deployment Time:** ~2-3 minutes from push to live
+
+### Troubleshooting Commands:
+
+**If deployment fails:**
+```bash
+# Check local build works
+pnpm build
+
+# If build fails locally, fix errors then retry
+# If build works locally but CI fails, check GitHub Actions logs
+
+# Force clean deployment (rare)
+rm -rf .docusaurus/ build/
+pnpm build
+```
+
+**If DNS issues:**
+```bash
+# Test DNS propagation
+dig docs.festivawl.com
+
+# Should show: docs.festivawl.com → clarru.github.io
+```
 
 ---
 
