@@ -14,13 +14,13 @@ const sidebars: SidebarsConfig = {
     'intro',
     {
       type: 'category',
-      label: '🚀 Getting Started',
+      label: 'Getting Started',
       items: ['getting-started'],
       collapsed: false,
     },
     {
       type: 'category',
-      label: '📊 Daily Operations', 
+      label: 'Daily Operations', 
       items: ['festival-management'],
       collapsed: false,
     },

@@ -23,6 +23,9 @@
   
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Global background color */
+  --ifm-background-color: #030303;
 }
 
 /* Dark mode colors */
@@ -35,6 +38,9 @@
   --ifm-color-primary-lighter: #ddd6fe;
   --ifm-color-primary-lightest: #ede9fe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Global background color for dark mode */
+  --ifm-background-color: #030303;
 }
 
 /* Custom components */
