@@ -35,9 +35,6 @@
   --ifm-color-primary-lighter: #ddd6fe;
   --ifm-color-primary-lightest: #ede9fe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  
-  /* Global background color for dark mode */
-  --ifm-background-color: #030303;
 }
 
 /* Custom components */
