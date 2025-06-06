@@ -11,7 +11,7 @@ dotenv.config({ path: '.env.local' });
 const config: Config = {
   title: 'Festivawl Documentation',
   tagline: 'Festival platform documentation and guides',
-  favicon: 'img/festivawl-logo.svg',
+  favicon: 'img/favicon2.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
